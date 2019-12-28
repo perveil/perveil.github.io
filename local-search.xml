@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2019/12/28/hello-world/"/>
+    <url>/2019/12/28/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>梯度下降</title>
+    <link href="/2019/04/05/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/"/>
+    <url>/2019/04/05/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>高数复习了方向导数和梯度，并且方向导数沿着梯度的方向最大。</p></blockquote><p>据定义：在某一处的梯度是一个向量，设u=f(x,y,z)，则在（x,y,z）处的梯度<br>$$<br>grad \quad u| p_{0}(u_{x}^{‘},u_{y}^{‘},u_{z}^{‘})<br>$$<br>也就是说，某一处对x、y…自变量偏导的大小和方向决定了此处梯度的大小和方向，例如：对x的偏导指的是将其他自变量看作是constant（常量）时函数f(x,y,z)的导数，指的是f(x,y,z)在自变量某变化区间内的变化率。所以，梯度在x轴的分量是沿某x区间内的f(x,y,z)变化率递增的方向，</p><blockquote><p>梯度下降，指的就是沿着梯度的反方向（f(x,y,z)增长的反方向）反复下降以求局部最小值。</p></blockquote><p>梯度下降公式：<br>$$<br>j_{\theta}=j- \alpha cost<br>$$<br>cost 指的是代价函数，在不同的模型选择上，cost的计算方式是不一样的。</p><p>比如逻辑回归、线性回归之间的代价函数就不一样。<br>$$<br>\alpha 指的是 学习步长，李宏毅老师叫learning\quad rate<br>$$<br>学习步长的选取现在还不清楚</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>ml</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>机器学习基础知识</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
