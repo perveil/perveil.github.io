@@ -145,6 +145,53 @@
     
     
     <div class="col-12 col-md-8 m-auto">
+      <a href="/2019/12/29/recommedationSY/">
+        <p class="h4 index-header">recommedationSY</p>
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">基于内容推荐的的 cost functioncondition：电影内容($x^i$)&amp;&amp;用户评分表$y^ (i,j)$=&gt;用户喜好($\Theta^j$)
+ condition：电影内容($x^i$)&amp;&amp;用户评分表$y^ (i,j)$=&gt;用户喜好($\Theta^j$)
+
+
+r(i,j) 指的是j用户对编号为i的电影是否评分   \\
+ x^i 指的是电影的类型评分                   \\
+ 正则项避免过拟合  \\
+ \Theta^j  为j用户的喜好协同过滤:只需要用户对电影的评分condition：用户电影评分表($y^ (i,j)$)&amp;&amp;用户喜好($\Theta ^j$)=&gt; 电影内容($x^i$)
+
+整合后的loss function：
+
+基于item的协同过滤：计算item之间的相似度，依据用户对于相似item的评分推测用户对于本item的评分cal similarity:
+
+通过similarity 计算评分：
+
+基于用户(USER)的协同过滤：用户之间的相似度计算:
+
+基于用户相似度就</div>
+        </div>
+      </a>
+
+      <div>
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-12-29&nbsp;&nbsp;
+        
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%20TensorFlow">推荐系统 TensorFlow</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4 mx-auto">
+    
+    
+    <div class="col-12 col-md-8 m-auto">
       <a href="/2019/12/28/hello-world/">
         <p class="h4 index-header">Hello World</p>
         
@@ -154,16 +201,12 @@
         <div class="index-excerpt" >
           <div class="index-text mb-1">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
 Quick StartCreate a new post1$ hexo new "My New Post"
-
 More info: Writing
 Run server1$ hexo server
-
 More info: Server
 Generate static files1$ hexo generate
-
 More info: Generating
 Deploy to remote sites1$ hexo deploy
-
 More info: Deployment
 </div>
         </div>
@@ -193,12 +236,18 @@ More info: Deployment
           <div class="index-text mb-1">
 高数复习了方向导数和梯度，并且方向导数沿着梯度的方向最大。
 
-据定义：在某一处的梯度是一个向量，设u=f(x,y,z)，则在（x,y,z）处的梯度$$grad \quad u| p_{0}(u_{x}^{‘},u_{y}^{‘},u_{z}^{‘})$$也就是说，某一处对x、y…自变量偏导的大小和方向决定了此处梯度的大小和方向，例如：对x的偏导指的是将其他自变量看作是constant（常量）时函数f(x,y,z)的导数，指的是f(x,y,z)在自变量某变化区间内的变化率。所以，梯度在x轴的分量是沿某x区间内的f(x,y,z)变化率递增的方向，
+据定义：在某一处的梯度是一个向量，设u=f(x,y,z)，则在（x,y,z）处的梯度
+
+grad \quad u| p_{0}(u_{x}^{'},u_{y}^{'},u_{z}^{'})也就是说，某一处对x、y…自变量偏导的大小和方向决定了此处梯度的大小和方向，例如：对x的偏导指的是将其他自变量看作是constant（常量）时函数f(x,y,z)的导数，指的是f(x,y,z)在自变量某变化区间内的变化率。所以，梯度在x轴的分量是沿某x区间内的f(x,y,z)变化率递增的方向，
 
 梯度下降，指的就是沿着梯度的反方向（f(x,y,z)增长的反方向）反复下降以求局部最小值。
 
-梯度下降公式：$$j_{\theta}=j- \alpha cost$$cost 指的是代价函数，在不同的模型选择上，cost的计算方式是不一样的。
-比如逻辑回归、线性回归之间的代价函数就不一样。$$\alpha 指的是 学习步长，李宏毅老师叫learning\quad rate$$学习步长的选取现在还不清楚
+梯度下降公式：
+
+j_{\theta}=j- \alpha costcost 指的是代价函数，在不同的模型选择上，cost的计算方式是不一样的。
+比如逻辑回归、线性回归之间的代价函数就不一样。
+
+\alpha 指的是 学习步长，李宏毅老师叫learning\quad rate学习步长的选取现在还不清楚
 </div>
         </div>
       </a>
@@ -408,6 +457,31 @@ More info: Deployment
 
 
 
+  
+
+  
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+          tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+              processEscapes: true,
+              skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+          }
+      });
+
+      MathJax.Hub.Queue(function() {
+          var all = MathJax.Hub.getAllJax(), i;
+          for(i=0; i < all.length; i += 1) {
+              all[i].SourceElement().parentNode.className += ' has-jax';
+          }
+      });
+
+    </script>
+
+    <script src="https://cdn.staticfile.org/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML" ></script>
+
+  
 
 
 
@@ -416,5 +490,25 @@ More info: Deployment
 
 
 
+
+<script src="../kramed/lib/rules/inline.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!--
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>

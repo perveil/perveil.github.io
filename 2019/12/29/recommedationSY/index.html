@@ -16,7 +16,7 @@
   <meta name="description" content="leetcode刷题、后端技术开发、算法、数据结构、机器学习(目标)">
   <meta name="author" content="laiso">
   <meta name="keywords" content="java elasticSearch algorithm">
-  <title>Archives ~ 目标成为一名专家</title>
+  <title>recommedationSY ~ 目标成为一名专家</title>
 
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
 <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
@@ -39,7 +39,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -118,6 +118,41 @@
             </span>
 
             
+              <br>
+              
+                <p class="mt-3">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
+                  Sunday, December 29th 2019, 7:55 pm
+                </p>
+              
+
+              <p>
+                
+                  
+                  &nbsp;<i class="far fa-chart-bar"></i>
+                  <span class="post-count">
+                    237 字
+                  </span>&nbsp;
+                
+
+                
+                  
+                  &nbsp;<i class="far fa-clock"></i>
+                  <span class="post-count">
+                      1 分钟
+                  </span>&nbsp;
+                
+
+                
+                  <!-- 不蒜子统计文章PV -->
+                  
+                  &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;
+                  <span id="busuanzi_container_page_pv">
+                    <span id="busuanzi_value_page_pv"></span> 次
+                  </span>&nbsp;
+                
+              </p>
+            
           </div>
 
           
@@ -128,35 +163,78 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5 z-depth-3" id="board">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-  <p class="h4">3 posts in total.</p>
-  <hr>
-  
-    
       
-      <p class="h5">2019</p>
-    
-    <a href="/2019/04/05/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">梯度下降</span>
-      <span style="float: right;">04-05</span>
-    </a>
-  
-</div>
 
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto" id="post">
+          <div class="markdown-body">
+            <h1 id="基于内容推荐的的-cost-function"><a href="#基于内容推荐的的-cost-function" class="headerlink" title="基于内容推荐的的 cost function"></a>基于内容推荐的的 cost function</h1><p>condition：电影内容($x^i$)&amp;&amp;用户评分表$y^ (i,j)$=&gt;用户喜好($\Theta^j$)</p>
+<h2 id><a href="#" class="headerlink" title=" "></a> </h2><p>condition：电影内容($x^i$)&amp;&amp;用户评分表$y^ (i,j)$=&gt;用户喜好($\Theta^j$)</p>
+<p><img src="https://i.loli.net/2019/12/29/UXbfzq2SeM1FdKD.png" srcset="/img/loading.gif" alt="屏幕截图_3_.png"></p>
+<script type="math/tex; mode=display">
+r(i,j) 指的是j用户对编号为i的电影是否评分   \\
+ x^i 指的是电影的类型评分                   \\
+ 正则项避免过拟合  \\
+ \Theta^j  为j用户的喜好</script><h1 id="协同过滤-只需要用户对电影的评分"><a href="#协同过滤-只需要用户对电影的评分" class="headerlink" title="协同过滤:只需要用户对电影的评分"></a><strong>协同过滤</strong>:只需要用户对电影的评分</h1><p>condition：用户电影评分表($y^ (i,j)$)&amp;&amp;用户喜好($\Theta ^j$)=&gt; 电影内容($x^i$)</p>
+<p><img src="https://i.loli.net/2019/12/29/rDzWUTmAcF6d5MR.png" srcset="/img/loading.gif" alt="屏幕截图_5_.png"></p>
+<p><strong>整合后的loss function：</strong></p>
+<p><img src="https://i.loli.net/2019/12/29/dQ4pLjOotEaNPux.png" srcset="/img/loading.gif" alt="屏幕截图_6_.png"></p>
+<h1 id="基于item的协同过滤：计算item之间的相似度，依据用户对于相似item的评分推测用户对于本item的评分"><a href="#基于item的协同过滤：计算item之间的相似度，依据用户对于相似item的评分推测用户对于本item的评分" class="headerlink" title="基于item的协同过滤：计算item之间的相似度，依据用户对于相似item的评分推测用户对于本item的评分"></a>基于item的协同过滤：计算item之间的相似度，依据用户对于相似item的评分推测用户对于本item的评分</h1><p>cal similarity:</p>
+<p><img src="https://i.loli.net/2019/12/29/wqaVNSIjnZlgbJc.png" srcset="/img/loading.gif" alt="屏幕截图_7_.png"></p>
+<p><strong>通过similarity 计算评分：</strong></p>
+<p><img src="https://i.loli.net/2019/12/29/szx7Adl2OHCf6qp.png" srcset="/img/loading.gif" alt="屏幕截图_8_.png"></p>
+<h1 id="基于用户-USER-的协同过滤："><a href="#基于用户-USER-的协同过滤：" class="headerlink" title="基于用户(USER)的协同过滤："></a>基于用户(USER)的协同过滤：</h1><p>用户之间的相似度计算:</p>
+<p><img src="https://i.loli.net/2019/12/29/iyBX3MYf2HIPrN9.png" srcset="/img/loading.gif" alt="屏幕截图_9_.png"></p>
+<p>基于用户相似度就算本用户的预测分数：</p>
+<p><img src="https://i.loli.net/2019/12/29/CarcO3w17jPHQb2.png" srcset="/img/loading.gif" alt="屏幕截图_10_.png"></p>
 
-              </div>
-            </div>
+            <hr>
+          </div>
+          <br>
+          <div>
+            <p>
+            
+            
+              <span>
+                <i class="iconfont icon-tag"></i>
+                
+                  <a class="hover-with-bg" href="/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%20TensorFlow">推荐系统 TensorFlow</a>
+                
+              </span>
+            
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
           </div>
         </div>
       </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;TOC</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+  </div>
+</div>
+
     
   </main>
 
@@ -235,6 +313,11 @@
 
 
 
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
 
 
   <script src="/lib/smooth-scroll/smooth-scroll.min.js" ></script>
@@ -275,7 +358,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "Archive&nbsp;",
+        "recommedationSY&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,

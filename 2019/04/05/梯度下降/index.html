@@ -131,7 +131,7 @@
                   
                   &nbsp;<i class="far fa-chart-bar"></i>
                   <span class="post-count">
-                    309 字
+                    308 字
                   </span>&nbsp;
                 
 
@@ -175,12 +175,18 @@
             <blockquote>
 <p>高数复习了方向导数和梯度，并且方向导数沿着梯度的方向最大。</p>
 </blockquote>
-<p>据定义：在某一处的梯度是一个向量，设u=f(x,y,z)，则在（x,y,z）处的梯度<br>$$<br>grad \quad u| p_{0}(u_{x}^{‘},u_{y}^{‘},u_{z}^{‘})<br>$$<br>也就是说，某一处对x、y…自变量偏导的大小和方向决定了此处梯度的大小和方向，例如：对x的偏导指的是将其他自变量看作是constant（常量）时函数f(x,y,z)的导数，指的是f(x,y,z)在自变量某变化区间内的变化率。所以，梯度在x轴的分量是沿某x区间内的f(x,y,z)变化率递增的方向，</p>
+<p>据定义：在某一处的梯度是一个向量，设u=f(x,y,z)，则在（x,y,z）处的梯度</p>
+<script type="math/tex; mode=display">
+grad \quad u| p_{0}(u_{x}^{'},u_{y}^{'},u_{z}^{'})</script><p>也就是说，某一处对x、y…自变量偏导的大小和方向决定了此处梯度的大小和方向，例如：对x的偏导指的是将其他自变量看作是constant（常量）时函数f(x,y,z)的导数，指的是f(x,y,z)在自变量某变化区间内的变化率。所以，梯度在x轴的分量是沿某x区间内的f(x,y,z)变化率递增的方向，</p>
 <blockquote>
 <p>梯度下降，指的就是沿着梯度的反方向（f(x,y,z)增长的反方向）反复下降以求局部最小值。</p>
 </blockquote>
-<p>梯度下降公式：<br>$$<br>j_{\theta}=j- \alpha cost<br>$$<br>cost 指的是代价函数，在不同的模型选择上，cost的计算方式是不一样的。</p>
-<p>比如逻辑回归、线性回归之间的代价函数就不一样。<br>$$<br>\alpha 指的是 学习步长，李宏毅老师叫learning\quad rate<br>$$<br>学习步长的选取现在还不清楚</p>
+<p>梯度下降公式：</p>
+<script type="math/tex; mode=display">
+j_{\theta}=j- \alpha cost</script><p>cost 指的是代价函数，在不同的模型选择上，cost的计算方式是不一样的。</p>
+<p>比如逻辑回归、线性回归之间的代价函数就不一样。</p>
+<script type="math/tex; mode=display">
+\alpha 指的是 学习步长，李宏毅老师叫learning\quad rate</script><p>学习步长的选取现在还不清楚</p>
 
             <hr>
           </div>
@@ -414,6 +420,31 @@
 
 
 
+  
+
+  
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+          tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+              processEscapes: true,
+              skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+          }
+      });
+
+      MathJax.Hub.Queue(function() {
+          var all = MathJax.Hub.getAllJax(), i;
+          for(i=0; i < all.length; i += 1) {
+              all[i].SourceElement().parentNode.className += ' has-jax';
+          }
+      });
+
+    </script>
+
+    <script src="https://cdn.staticfile.org/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML" ></script>
+
+  
 
 
 
@@ -422,5 +453,25 @@
 
 
 
+
+<script src="../kramed/lib/rules/inline.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!--
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>
