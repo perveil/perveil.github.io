@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>logistic_classification</title>
+    <link href="/2020/01/11/logistic-classification/"/>
+    <url>/2020/01/11/logistic-classification/</url>
+    
+    <content type="html"><![CDATA[<h1 id="逻辑斯蒂-Logistic-回归—easy二分类"><a href="#逻辑斯蒂-Logistic-回归—easy二分类" class="headerlink" title="逻辑斯蒂(Logistic)回归—easy二分类"></a>逻辑斯蒂(Logistic)回归—easy二分类</h1><h2 id="1-根据stimoid函数-0-1分布"><a href="#1-根据stimoid函数-0-1分布" class="headerlink" title="1.根据stimoid函数(0-1分布)"></a>1.根据stimoid函数(0-1分布)</h2><p>​     P(y=1|x;$\theta$)=$h_{\theta}(x)$        P(y=0|x;$\theta$)=1-$h_{\theta}(x)$</p><h2 id="2-loss-function"><a href="#2-loss-function" class="headerlink" title="2.loss function"></a>2.loss function</h2><p>​      loss($h_{\theta}$,y)=$h_{\theta}(x)^y$+$(1-h_{\theta}(x))^{1-y}$    //二分类loss func</p><p>y=1/0  等于1 时<strong>loss($h_{\theta}$,y)=$h_{\theta}(x)$=  P(y=1|x;$\theta$)</strong></p><p>​             等于0 时 <strong>loss($h_{\theta}$,y)=$1-h_{\theta}(x)$=P(y=0|x;$\theta$)</strong></p><p>nodes： loss func ==y 为 1/0 的概率             <em>*</em></p><p>取log</p><p>​        loss($h_{\theta}$,y)=ylog($h_{\theta}(x)$)+(1-y)log($(1-h_{\theta}(x))$)</p><p> <strong>最大似然估计</strong>（sample 之间相互独立）<strong>概率连乘</strong>得到整体的loss func</p><p>​        J($\theta$)=$\sum_{i=1}^{m} (y^{(i)}log(h_{\theta}(x^{(i)}))+(1-y^{(i)})log(1-h_{\theta}(x^{(i)})))$</p><p>此时根据(<em>*</em>)的内容， 可以通过这个损失函数求出样本所属类别的概率，而这个概率越大越好，则此时求的时J($\theta$) MAX VALUE。</p><p>计算J($\theta$) MAX VALUE的方法：梯度上升法</p><p>   同梯度下降的原理相同，但与其形式不同：</p><p>​                         $\theta$=$\theta$+$\alpha \frac{\bigtriangledown j(\theta)}{\theta}$</p><p>问题转换为如何求J($\theta$) 对$\theta$ 的偏导,由 $h_{\theta}(x)$</p><p>​           $h_{\theta}(x)$ =g($\theta^{T}x$)=$\frac{1}{1+e^{-\theta^{T}x}}$</p><p>对$\theta$ 求偏导(隐函数求偏导—》偏导数连乘)</p><p>​     $\frac{J(\partial)}{\theta_j}J({\theta})$=$\frac{\partial J(\theta)}{\partial g(\theta^{T}x)}$ <em>$\frac{\partial g(\theta^{T}x) }{\partial \theta^{T}x}$ </em>$\frac{\partial \theta^Tx}{\partial \theta_j}$</p><p> 推导得：</p><p>​              $\theta_j:=\theta_j+\alpha \sum_{i=1}^{m}(y^{(i)}-h_{\theta}(x^{(i)}))x^{(i)}$</p><p>自此梯度上升迭代公式推到完毕</p><p>梯度上升Python代码</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">gradAscent</span><span class="hljs-params">(dataMatIn, classLabels)</span>:</span><br>    dataMatrix=np.mat(dataMatIn)<br>    labelMat=np.mat(classLabels).transpose()<br>    m,n=np.shape(dataMatrix)<br>    alpha=<span class="hljs-number">0.01</span> <span class="hljs-comment">#学习步长</span><br>    cycleNum=<span class="hljs-number">500</span> <span class="hljs-comment">#迭代次数</span><br>    weight=np.ones([n,<span class="hljs-number">1</span>]) <span class="hljs-comment">#初始化权重</span><br>    <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> range(cycleNum):<br>        h=sigmoid(dataMatrix*weight)<br>        error=labelMat-h<br>        weight=weight+alpha*dataMatrix.transpose()*error<br>    <span class="hljs-keyword">return</span> weight.getA()<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>machine learning logisticClassification</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>recommedationSY</title>
     <link href="/2019/12/29/recommedationSY/"/>
     <url>/2019/12/29/recommedationSY/</url>

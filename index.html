@@ -8,7 +8,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/dog.png">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -60,7 +60,7 @@
           
           
           <li class="nav-item">
-            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="/">ホーム</a>
           </li>
         
           
@@ -68,7 +68,7 @@
           
           
           <li class="nav-item">
-            <a class="nav-link" href="/archives/">Archives</a>
+            <a class="nav-link" href="/archives/">アーカイブ</a>
           </li>
         
           
@@ -76,7 +76,7 @@
           
           
           <li class="nav-item">
-            <a class="nav-link" href="/categories/">Categories</a>
+            <a class="nav-link" href="/categories/">カテゴリー</a>
           </li>
         
           
@@ -84,7 +84,7 @@
           
           
           <li class="nav-item">
-            <a class="nav-link" href="/tags/">Tags</a>
+            <a class="nav-link" href="/tags/">タグ</a>
           </li>
         
           
@@ -92,7 +92,7 @@
           
           
           <li class="nav-item">
-            <a class="nav-link" href="/about/">About</a>
+            <a class="nav-link" href="/about/">本ブログ情報　</a>
           </li>
         
         
@@ -140,6 +140,42 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
+
+  <div class="row mb-4 mx-auto">
+    
+    
+    <div class="col-12 col-md-8 m-auto">
+      <a href="/2020/01/11/logistic-classification/">
+        <p class="h4 index-header">logistic_classification</p>
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">逻辑斯蒂(Logistic)回归—easy二分类1.根据stimoid函数(0-1分布)​     P(y=1|x;$\theta$)=$h_{\theta}(x)$        P(y=0|x;$\theta$)=1-$h_{\theta}(x)$
+2.loss function​      loss($h_{\theta}$,y)=$h_{\theta}(x)^y$+$(1-h_{\theta}(x))^{1-y}$    //二分类loss func
+y=1/0  等于1 时loss($h_{\theta}$,y)=$h_{\theta}(x)$=  P(y=1|x;$\theta$)
+​             等于0 时 loss($h_{\theta}$,y)=$1-h_{\theta}(x)$=P(y=0|x;$\theta$)
+nodes： loss func ==y 为 1/0 的概率             *
+取log
+​        loss($h_{\theta}$,y)=ylog($h_{\theta}(x)$)+(1-y)log($(1-h_{\the</div>
+        </div>
+      </a>
+
+      <div>
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2020-01-11&nbsp;&nbsp;
+        
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/machine%20learning%20logisticClassification">machine learning logisticClassification</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
 
   <div class="row mb-4 mx-auto">
     
@@ -296,7 +332,7 @@ j_{\theta}=j- \alpha costcost 指的是代价函数，在不同的模型选择�
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <h4 class="modal-title w-100 font-weight-bold">検索</h4>
         <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -305,7 +341,7 @@ j_{\theta}=j- \alpha costcost 指的是代价函数，在不同的模型选择�
         <div class="md-form mb-5">
           <input type="text" id="local-search-input" class="form-control validate">
           <label data-error="x" data-success="v"
-                 for="local-search-input">keyword</label>
+                 for="local-search-input">キーワード</label>
         </div>
         <div class="list-group" id="local-search-result"></div>
       </div>
